@@ -1,0 +1,35 @@
+<body>
+
+<button  (click)="onShowChange()">Show Student List</button>
+<br><br>
+<div *ngIf="status">
+<table border="1" align="center">
+<tr>
+<th colspan="3">Students</th>
+</tr>
+<tr>
+	<th>Student Name</th>
+	<th>Student ID</th>
+	<th>Student Add</th>
+</tr>
+
+<tr *ngFor="let stu of Student">
+
+		<td>{{stu.name}}</td>
+		<td>{{stu.id}}</td>
+		<td>{{stu.add}}</td>
+
+</tr>
+</table>
+</div>
+<br><br>
+Two Way Data Binding:<br><br>
+FirstName<input type="text" [(ngModel)]="fname"><br><br>
+LastName<input type="text" [(ngModel)]="lname"><br><br>
+<p [ngClass]="{one:cone}">FullName:{{fname}} {{lname}}</p><br><br>
+<button (click)="apply()">Apply ngClass</button><br><br>
+<h1 [ngStyle]="{'font-style':style,'font-size':size}">ngStyle Applied</h1>
+
+Enter Child Data:<input type="text" #cdata (keyup)="onChange(cdata.value)">
+<p>Value from parent component is </p><h1 [ngStyle]="{'font-style':style,'font-size':size}">{{parentData}}</h1>
+</body>

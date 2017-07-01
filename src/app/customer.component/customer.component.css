@@ -1,0 +1,17 @@
+table{
+	border-color: pink;
+background-color: lightblue;
+}
+th{
+	color:red; 
+}
+td{
+	color: blue;
+}
+h5{
+	color: red;
+	font-style: bold ;
+}
+body{
+	text-align: center;
+}

@@ -1,0 +1,12 @@
+<body><h1>
+  {{title}}
+</h1>
+Enter Parent Data:<input type="text" #pdata (keyup)="0">
+<p>Child Component Data is</p><h1>{{childData|uppercase}}</h1>
+<stu-root (childEvent)="childData=$event" [parentData]="pdata.value"></stu-root>
+<nav >
+	<a routerLink="/customers" routerLinkActive="active" class="btn btn-info" role="button" >Customers</a>
+	
+</nav>
+<router-outlet></router-outlet>
+</body>
